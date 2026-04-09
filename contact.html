@@ -150,7 +150,14 @@
       <!-- FORMULAIRE -->
       <div>
         <h2 style="font-family:var(--font-display);font-size:1.8rem;color:var(--navy);margin-bottom:8px">Envoyez-nous un message</h2>
-        <p style="color:var(--gray-600);margin-bottom:32px">Remplissez ce formulaire et nous vous répondons via WhatsApp.</p>
+        <p style="color:var(--gray-600);margin-bottom:24px">Choisissez votre mode de contact préféré.</p>
+
+        <!-- TOGGLE WhatsApp / Email -->
+        <div style="display:flex;gap:12px;margin-bottom:28px">
+          <button type="button" id="btn-wa" onclick="switchContact('wa')" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:var(--radius-md);border:2px solid #25d366;background:#25d366;color:#fff;font-weight:700;font-size:.95rem;cursor:pointer;transition:all .2s">📱 WhatsApp</button>
+          <button type="button" id="btn-email" onclick="switchContact('email')" style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:var(--radius-md);border:2px solid var(--gray-200);background:#fff;color:var(--gray-600);font-weight:700;font-size:.95rem;cursor:pointer;transition:all .2s">📧 Email</button>
+        </div>
+
         <div class="form-card" style="padding:36px">
           <form id="contactForm">
             <div class="form-grid">
@@ -158,9 +165,15 @@
                 <label class="form-label">Nom complet *</label>
                 <input type="text" class="form-input" id="cf-nom" placeholder="Votre nom" required>
               </div>
-              <div class="form-group">
-                <label class="form-label">WhatsApp *</label>
-                <input type="tel" class="form-input" id="cf-tel" placeholder="+225 07 XX XX XX XX" required>
+              <!-- Champ WhatsApp -->
+              <div class="form-group" id="field-wa">
+                <label class="form-label">Numéro WhatsApp *</label>
+                <input type="tel" class="form-input" id="cf-tel" placeholder="+225 07 XX XX XX XX">
+              </div>
+              <!-- Champ Email -->
+              <div class="form-group" id="field-email" style="display:none">
+                <label class="form-label">Adresse email *</label>
+                <input type="email" class="form-input" id="cf-email" placeholder="votre@email.com">
               </div>
               <div class="form-group full">
                 <label class="form-label">Sujet *</label>
@@ -180,8 +193,8 @@
                 <textarea class="form-textarea" id="cf-message" rows="5" placeholder="Décrivez votre demande avec le maximum de détails pour que nous puissions vous répondre précisément..." required></textarea>
               </div>
             </div>
-            <button type="submit" class="btn btn-whatsapp btn-full btn-lg" style="margin-top:8px">📱 Envoyer via WhatsApp</button>
-            <p style="text-align:center;color:var(--gray-400);font-size:.78rem;margin-top:10px">Votre message sera envoyé directement sur notre WhatsApp professionnel.</p>
+            <button type="submit" id="submit-btn" class="btn btn-whatsapp btn-full btn-lg" style="margin-top:8px">📱 Envoyer via WhatsApp</button>
+            <p id="submit-hint" style="text-align:center;color:var(--gray-400);font-size:.78rem;margin-top:10px">Votre message sera envoyé directement sur notre WhatsApp professionnel.</p>
           </form>
         </div>
       </div>
@@ -291,14 +304,67 @@
 <button id="backToTop" aria-label="Retour en haut">↑</button>
 
 <script>
+let contactMode = 'wa';
+
+function switchContact(mode) {
+  contactMode = mode;
+  const btnWa = document.getElementById('btn-wa');
+  const btnEmail = document.getElementById('btn-email');
+  const fieldWa = document.getElementById('field-wa');
+  const fieldEmail = document.getElementById('field-email');
+  const submitBtn = document.getElementById('submit-btn');
+  const submitHint = document.getElementById('submit-hint');
+  const cfTel = document.getElementById('cf-tel');
+  const cfEmailInput = document.getElementById('cf-email');
+
+  if (mode === 'wa') {
+    btnWa.style.background = '#25d366';
+    btnWa.style.borderColor = '#25d366';
+    btnWa.style.color = '#fff';
+    btnEmail.style.background = '#fff';
+    btnEmail.style.borderColor = 'var(--gray-200)';
+    btnEmail.style.color = 'var(--gray-600)';
+    fieldWa.style.display = '';
+    fieldEmail.style.display = 'none';
+    cfTel.required = true;
+    cfEmailInput.required = false;
+    submitBtn.className = 'btn btn-whatsapp btn-full btn-lg';
+    submitBtn.style.marginTop = '8px';
+    submitBtn.innerHTML = '📱 Envoyer via WhatsApp';
+    submitHint.textContent = 'Votre message sera envoyé directement sur notre WhatsApp professionnel.';
+  } else {
+    btnEmail.style.background = 'var(--navy)';
+    btnEmail.style.borderColor = 'var(--navy)';
+    btnEmail.style.color = '#fff';
+    btnWa.style.background = '#fff';
+    btnWa.style.borderColor = 'var(--gray-200)';
+    btnWa.style.color = 'var(--gray-600)';
+    fieldWa.style.display = 'none';
+    fieldEmail.style.display = '';
+    cfTel.required = false;
+    cfEmailInput.required = true;
+    submitBtn.className = 'btn btn-primary btn-full btn-lg';
+    submitBtn.style.marginTop = '8px';
+    submitBtn.innerHTML = '📧 Envoyer par Email';
+    submitHint.textContent = 'Votre message sera envoyé à notre adresse email professionnelle.';
+  }
+}
+
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const nom = document.getElementById('cf-nom').value;
-  const tel = document.getElementById('cf-tel').value;
   const sujet = document.getElementById('cf-sujet').value;
   const msg = document.getElementById('cf-message').value;
-  const text = `Bonjour RAZAK Multi Service !\n\n👤 Nom : ${nom}\n📱 WhatsApp : ${tel}\n📋 Sujet : ${sujet}\n\n💬 Message :\n${msg}`;
-  window.open(`https://wa.me/2250797388202?text=${encodeURIComponent(text)}`, '_blank');
+
+  if (contactMode === 'wa') {
+    const tel = document.getElementById('cf-tel').value;
+    const text = `Bonjour RAZAK Multi Service !\n\n👤 Nom : ${nom}\n📱 WhatsApp : ${tel}\n📋 Sujet : ${sujet}\n\n💬 Message :\n${msg}`;
+    window.open(`https://wa.me/2250797388202?text=${encodeURIComponent(text)}`, '_blank');
+  } else {
+    const email = document.getElementById('cf-email').value;
+    const body = `Bonjour RAZAK Multi Service,\n\nNom : ${nom}\nEmail : ${email}\nSujet : ${sujet}\n\nMessage :\n${msg}`;
+    window.location.href = `mailto:contact@razak-multiservices.com?subject=${encodeURIComponent('Contact - ' + sujet)}&body=${encodeURIComponent(body)}`;
+  }
 });
 </script>
 <script src="js/main.js"></script>
