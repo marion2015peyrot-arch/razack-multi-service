@@ -1,0 +1,203 @@
+/* =============================================
+   RESPONSIVE.CSS — RAZAK Multi Service
+   Mobile-first optimisations
+   Breakpoints : 480px / 600px / 768px / 1024px
+   ============================================= */
+
+/* ── UTILITAIRES MOBILE ── */
+img { max-width: 100%; height: auto; }
+* { box-sizing: border-box; }
+
+/* ── TABLETTE LARGE (≤1024px) ── */
+@media (max-width: 1024px) {
+  .container { padding: 0 24px; }
+  .hero h1 { font-size: 2.8rem; }
+  .section { padding: 72px 0; }
+}
+
+/* ── TABLETTE / MOBILE LARGE (≤768px) ── */
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-inner { height: 64px; }
+  .nav-logo img { height: 56px !important; }
+
+  /* Hero */
+  .hero { min-height: 85vh; padding: 100px 0 60px; }
+  .hero h1 { font-size: 2rem; line-height: 1.2; }
+  .hero p { font-size: 1rem; }
+  .hero-actions { flex-direction: column; align-items: center; gap: 12px; }
+  .hero-actions .btn { width: 100%; max-width: 340px; text-align: center; }
+  .page-hero { padding: 110px 0 56px; }
+  .page-hero h1 { font-size: 2rem; }
+
+  /* Sections */
+  .section { padding: 56px 0; }
+  .section-header h2 { font-size: 1.8rem; }
+  .container { padding: 0 16px; }
+
+  /* Grilles */
+  .grid-2,
+  .grid-3,
+  .poles-grid,
+  .listing-grid,
+  .mission-grid,
+  .values-grid,
+  .process-grid { grid-template-columns: 1fr !important; }
+
+  .footer-top { grid-template-columns: 1fr !important; gap: 32px; }
+  .stats-inner { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Stats bar */
+  .stats-bar { padding: 32px 0; }
+  .stat-number { font-size: 2rem; }
+
+  /* Cards */
+  .pole-card,
+  .listing-card,
+  .form-card { border-radius: 12px; }
+
+  /* Formulaires */
+  .form-grid { grid-template-columns: 1fr !important; }
+  .form-group.full { grid-column: span 1; }
+  .form-input,
+  .form-select,
+  .form-textarea { font-size: 16px !important; } /* évite le zoom auto sur iOS */
+
+  /* Footer */
+  .footer { padding: 56px 0 0; }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .footer-bottom .footer-copy { font-size: .75rem; }
+
+  /* Bouton WhatsApp flottant */
+  .wa-float { bottom: 20px; right: 16px; padding: 14px; }
+  .wa-float .wa-text { display: none; }
+
+  /* CTA section */
+  .cta-section { padding: 64px 16px; }
+  .cta-actions { flex-direction: column; align-items: center; gap: 12px; }
+  .cta-actions .btn { width: 100%; max-width: 340px; text-align: center; }
+
+  /* Contact page */
+  .contact-cards { grid-template-columns: 1fr !important; }
+  .contact-layout { grid-template-columns: 1fr !important; gap: 40px; }
+  .horaires-grid { grid-template-columns: 1fr !important; }
+  .services-rapides { grid-template-columns: 1fr 1fr; }
+
+  /* Directeur */
+  .directeur-inner { grid-template-columns: 1fr; }
+  .directeur-photo { position: static; width: 100%; max-width: 320px; margin: 0 auto 32px; }
+
+  /* Ameublement / Immobilier filtres */
+  .filters-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  /* Logo footer */
+  .footer img { height: 120px !important; }
+
+  /* Accordion */
+  .accordion-trigger { font-size: .9rem; padding: 16px; }
+}
+
+/* ── MOBILE (≤600px) ── */
+@media (max-width: 600px) {
+  /* Hero */
+  .hero h1 { font-size: 1.75rem; }
+  .page-hero h1 { font-size: 1.6rem; }
+
+  /* Stats */
+  .stats-inner { grid-template-columns: 1fr 1fr; }
+  .stat-number { font-size: 1.8rem; }
+
+  /* Services rapides contact */
+  .services-rapides { grid-template-columns: 1fr; }
+
+  /* Filtres */
+  .filters-grid { grid-template-columns: 1fr; }
+
+  /* Poles / listing */
+  .pole-card-body { padding: 20px; }
+  .listing-card-body { padding: 16px; }
+
+  /* Contact toggle */
+  #btn-wa, #btn-email { font-size: .85rem; padding: 12px 8px; }
+
+  /* Legal pages */
+  .legal-content h2 { font-size: 1.2rem; }
+  .legal-info-box { padding: 16px; }
+}
+
+/* ── PETIT MOBILE (≤480px) ── */
+@media (max-width: 480px) {
+  .nav-logo img { height: 48px !important; }
+  .hero h1 { font-size: 1.55rem; }
+  .hero p { font-size: .9rem; }
+
+  /* Stats bar sur 2 colonnes */
+  .stats-inner { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  /* Boutons pleine largeur */
+  .btn-lg { padding: 14px 20px; font-size: .95rem; }
+
+  /* Footer légal empilé */
+  .footer-bottom span:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .footer-bottom span:last-child a::before { content: none; }
+
+  /* Section header */
+  .section-header h2 { font-size: 1.5rem; }
+  .eyebrow { font-size: .65rem; }
+
+  /* Cards contact */
+  .contact-card-item { padding: 28px 20px; }
+
+  /* Valeurs */
+  .values-grid { grid-template-columns: 1fr; }
+
+  /* CTA */
+  .cta-content h2 { font-size: 1.6rem; }
+  .cta-content p { font-size: .9rem; }
+}
+
+/* ── TRÈS PETIT MOBILE (≤360px) ── */
+@media (max-width: 360px) {
+  .container { padding: 0 12px; }
+  .hero h1 { font-size: 1.4rem; }
+  .nav-logo img { height: 42px !important; }
+  .btn { padding: 12px 16px; font-size: .875rem; }
+}
+
+/* ── AMÉLIORATION TOUCH ── */
+@media (hover: none) and (pointer: coarse) {
+  /* Cibles tactiles minimum 44px */
+  .btn,
+  .nav-link,
+  .service-rapide,
+  .accordion-trigger,
+  .wa-float { min-height: 44px; }
+
+  /* Pas de hover sur tactile */
+  .pole-card:hover,
+  .listing-card:hover,
+  .contact-card-item:hover { transform: none; box-shadow: var(--shadow-sm); }
+
+  /* Dropdown accessible au tap via JS */
+  .nav-dropdown { -webkit-overflow-scrolling: touch; }
+}
+
+/* ── PERFORMANCE MOBILE ── */
+@media (max-width: 768px) {
+  /* Réduction des animations sur mobile */
+  .pole-card, .listing-card, .contact-card-item, .service-rapide {
+    transition: none;
+  }
+  /* Texte lisible sans zoom */
+  body { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+}
