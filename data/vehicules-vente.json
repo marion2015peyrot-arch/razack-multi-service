@@ -204,5 +204,23 @@
     "doors": 5,
     "emoji": "🚙",
     "desc": "Design distinctif, intérieur i-Cockpit, équipements modernes."
+  },
+  {
+    "brand": "Toyota",
+    "model": "LAND CRUISER PRADO VX",
+    "year": 2020,
+    "km": 73000,
+    "price": 34000000,
+    "color": "NOIR",
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "type": "Pick-up",
+    "engine": "3.0L V6",
+    "doors": 4,
+    "status": "available",
+    "emoji": "🚗",
+    "photo": "https://razak-multiservices.vercel.app/images/annonces/1776107868195.jpg",
+    "desc": "FULL OPTIONS \nTOIT OUVRANT\ndémarrage start-stop\nécran et camera de recul \n7 places assises \nSiege electrique\ntout papier a jour",
+    "id": 13
   }
 ]
