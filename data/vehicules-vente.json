@@ -15,7 +15,7 @@
     "doors": 4,
     "emoji": "🚙",
     "desc": "FULL OPTIONS\nDCT A 7 VITESSES, SYSTEME INTELLIGENT",
-    "photo": "https://razak-multiservices.vercel.app/images/annonces/1776110866386.jpg"
+    "photo": "/images/annonces/1776110866386.jpg"
   },
   {
     "id": 2,
@@ -33,7 +33,7 @@
     "doors": 4,
     "emoji": "🛻",
     "desc": "Véhicule robuste idéal pour tous terrains. Très faible kilométrage.",
-    "photo": "https://razak-multiservices.vercel.app/images/annonces/1776106421831.jpg"
+    "photo": "/images/annonces/1776106421831.jpg"
   },
   {
     "id": 3,
@@ -219,7 +219,7 @@
     "doors": 4,
     "status": "available",
     "emoji": "🚗",
-    "photo": "https://razak-multiservices.vercel.app/images/annonces/1776107868195.jpg",
+    "photo": "/images/annonces/1776107868195.jpg",
     "desc": "FULL OPTIONS \nTOIT OUVRANT\ndémarrage start-stop\nécran et camera de recul \n7 places assises \nSiege electrique\ntout papier a jour",
     "id": 13
   }

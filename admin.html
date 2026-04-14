@@ -581,7 +581,7 @@ async function uploadPhotoRowFile(fileInput) {
       if (existingFile.sha) body.sha = existingFile.sha;
       const putRes = await fetch('https://api.github.com/repos/' + REPO + '/contents/' + path, { method: 'PUT', headers, body: JSON.stringify(body) });
       if (!putRes.ok) throw new Error('Erreur ' + putRes.status);
-      const url = 'https://razak-multiservices.vercel.app/' + path;
+      const url = '/' + path;
       const input = row.querySelector('.photo-row-input');
       input.value = url;
       updatePhotoThumb(input);
