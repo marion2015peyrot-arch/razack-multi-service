@@ -40,17 +40,19 @@
   },
   {
     "id": 3,
-    "cat": "Salle à manger",
-    "titre": "Table à manger 8 places + chaises",
-    "desc": "Table rectangulaire en bois massif avec 8 chaises assorties. Idéale pour grandes familles.",
-    "prix": 420000,
+    "cat": "Salon",
+    "titre": "Salon complet 6 places",
+    "desc": "Salon complet 6 places\nen velou ou din",
+    "prix": 160000,
     "tags": [
-      "Bois massif",
-      "8 places",
-      "Chaises incluses"
+      "Salon complet 6 places"
     ],
-    "emoji": "🍽️",
-    "statut": "available"
+    "emoji": "",
+    "statut": "available",
+    "photos": [
+      "/images/annonces/1776277936591_bkkj2.jpg",
+      "/images/annonces/1776277971926_5tybk.jpg"
+    ]
   },
   {
     "id": 4,
