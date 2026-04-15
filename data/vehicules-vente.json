@@ -15,7 +15,11 @@
     "doors": 4,
     "emoji": "🚙",
     "desc": "FULL OPTIONS\nDCT A 7 VITESSES, SYSTEME INTELLIGENT",
-    "photo": "/images/annonces/1776110866386.jpg"
+    "photo": "/images/annonces/1776110866386.jpg",
+    "photos": [
+      "/images/annonces/1776225452485_sv4ae.jpg",
+      "/images/annonces/1776225401961_pa87m.jpg"
+    ]
   },
   {
     "id": 2,
