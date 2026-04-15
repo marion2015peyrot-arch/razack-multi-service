@@ -126,20 +126,28 @@
   },
   {
     "id": 6,
-    "brand": "Ford",
-    "model": "Ranger Wildtrak",
+    "brand": "TOYOTA",
+    "model": "RAV4",
     "year": 2021,
-    "km": 40000,
-    "fuel": "Diesel",
+    "km": 103173,
+    "fuel": "Essence",
     "transmission": "Automatique",
     "type": "Pick-up",
-    "price": 17800000,
+    "price": 16500000,
     "status": "available",
-    "color": "Gris",
-    "engine": "2.0L Bi-Turbo",
+    "color": "NOIR",
+    "engine": "4 Cylindres",
     "doors": 4,
     "emoji": "🛻",
-    "desc": "4x4 puissant, barre de protection, treuil électrique, excellent état."
+    "desc": "Papier à jour\nEtat du moteur et de la boite 10/10\nDémarrage à clé\nIntérieur cuir\nGros écran\nCaméra de recul",
+    "photos": [
+      "/images/annonces/1776252635722_yebyt.jpg",
+      "/images/annonces/1776252676687_m7pgc.jpg",
+      "/images/annonces/1776252718972_dpxir.jpg",
+      "/images/annonces/1776252758636_bc875.jpg",
+      "/images/annonces/1776252848431_jjn6a.jpg",
+      "/images/annonces/1776252908623_quy1q.jpg"
+    ]
   },
   {
     "id": 7,
