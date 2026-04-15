@@ -151,20 +151,28 @@
   },
   {
     "id": 7,
-    "brand": "Kia",
-    "model": "Sportage EX",
-    "year": 2022,
-    "km": 22000,
+    "brand": "MITSUBISHI",
+    "model": "OUTLANDER SPORT",
+    "year": 2025,
+    "km": 2000,
     "fuel": "Essence",
     "transmission": "Automatique",
-    "type": "SUV",
-    "price": 14500000,
+    "type": "Pick-up",
+    "price": 19500000,
     "status": "available",
-    "color": "Rouge",
-    "engine": "2.0L MPi",
-    "doors": 5,
+    "color": "Bleu nuit",
+    "engine": "4 Cylindres",
+    "doors": 4,
     "emoji": "🚙",
-    "desc": "SUV moderne, nombreux équipements de sécurité, intérieur élégant."
+    "desc": "Acheté chez le concessionnaire CFAO\nCaméra de recul\n2 clés",
+    "photos": [
+      "/images/annonces/1776253321018_q9at2.jpg",
+      "/images/annonces/1776253380650_50wcz.jpg",
+      "/images/annonces/1776253458904_2als5.jpg",
+      "/images/annonces/1776253494517_8d24s.jpg",
+      "/images/annonces/1776253572283_5t13g.jpg",
+      "/images/annonces/1776253707356_e5taa.jpg"
+    ]
   },
   {
     "id": 8,
