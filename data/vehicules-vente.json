@@ -77,20 +77,27 @@
   },
   {
     "id": 4,
-    "brand": "Hyundai",
-    "model": "Tucson Prestige",
-    "year": 2022,
-    "km": 18000,
+    "brand": "BMW",
+    "model": "X5 M-COMPETION",
+    "year": 2020,
+    "km": 33000,
     "fuel": "Essence",
     "transmission": "Automatique",
-    "type": "SUV",
-    "price": 16500000,
-    "status": "new",
-    "color": "Bleu",
-    "engine": "1.6L GDI",
-    "doors": 5,
+    "type": "Pick-up",
+    "price": 51000000,
+    "status": "available",
+    "color": "NOIR",
+    "engine": "V8",
+    "doors": 4,
     "emoji": "🚙",
-    "desc": "Quasi-neuf, garantie constructeur, équipements complets."
+    "desc": "Interieur cuir, toit ouvrant panoramique\nCaméra 360°",
+    "photos": [
+      "/images/annonces/1776250978996_nlk2d.jpg",
+      "/images/annonces/1776251086144_rfo5l.jpg",
+      "/images/annonces/1776251117415_kxlbp.jpg",
+      "/images/annonces/1776251202371_25fq0.jpg",
+      "/images/annonces/1776251420240_9z79l.jpg"
+    ]
   },
   {
     "id": 5,
