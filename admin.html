@@ -584,7 +584,10 @@ async function uploadPhotoRowFile(fileInput) {
       const url = '/' + path;
       const input = row.querySelector('.photo-row-input');
       input.value = url;
-      updatePhotoThumb(input);
+      // Aperçu immédiat via blob local (avant redéploiement Vercel)
+      const thumb = row.querySelector('.photo-thumb');
+      thumb.src = URL.createObjectURL(file);
+      thumb.classList.add('visible');
       progress.textContent = '✅ Photo uploadée !';
       setTimeout(() => { progress.classList.remove('show'); progress.textContent = '⬆️ Upload en cours…'; }, 3000);
       toast('Photo uploadée ✓', 'success');
