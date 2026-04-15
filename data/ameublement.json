@@ -2,12 +2,12 @@
   {
     "id": 1,
     "cat": "Salon",
-    "titre": "Salon complet 7 places",
-    "desc": "Canapé 7 places en tissu velou ou din, confortable et élégant. Disponible en plusieurs coloris.",
+    "titre": "Salon complet 7 places en L",
+    "desc": "Canapé 7 places en L, \nTissu velou ou din, confortable et élégant. \nDisponible en plusieurs coloris.",
     "prix": 190000,
     "tags": [
       "Tissu velou et din",
-      "7 places",
+      "7 places en L",
       "Livraison incluse"
     ],
     "emoji": "🛋️",
@@ -56,17 +56,20 @@
   },
   {
     "id": 4,
-    "cat": "Bureau",
-    "titre": "Bureau exécutif avec caisson",
-    "desc": "Bureau directorial avec caisson 3 tiroirs, finition noyer. Parfait pour espace professionnel.",
-    "prix": 185000,
+    "cat": "Salon",
+    "titre": "SALON COMPLET 7 PLACES",
+    "desc": "HAUT STANDING, \nFAIT EN VELOU OU DIN\nTOUTES COULEURS CONFONDUES",
+    "prix": 250000,
     "tags": [
-      "Noyer",
-      "Caisson inclus",
-      "Professionnel"
+      "SALON HAUT STANDING 7 PLACES"
     ],
-    "emoji": "💼",
-    "statut": "available"
+    "emoji": "",
+    "statut": "available",
+    "photos": [
+      "/images/annonces/1776278507824_pi0p2.jpg",
+      "/images/annonces/1776278520216_qiz67.jpg",
+      "/images/annonces/1776278531846_ab4xg.jpg"
+    ]
   },
   {
     "id": 5,
