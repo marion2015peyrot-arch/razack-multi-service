@@ -2,16 +2,23 @@
   {
     "id": 1,
     "cat": "Salon",
-    "titre": "Canapé d'angle moderne 6 places",
-    "desc": "Canapé d'angle en tissu premium, confortable et élégant. Disponible en plusieurs coloris.",
-    "prix": 380000,
+    "titre": "Canapé d'angle moderne 7 places",
+    "desc": "Canapé 7 places en tissu velou ou din, confortable et élégant. Disponible en plusieurs coloris.",
+    "prix": 190000,
     "tags": [
-      "Tissu premium",
-      "6 places",
+      "Tissu velou et din",
+      "7 places",
       "Livraison incluse"
     ],
     "emoji": "🛋️",
-    "statut": "available"
+    "statut": "available",
+    "photos": [
+      "/images/annonces/1776277012687_3k7lf.jpg",
+      "/images/annonces/1776277027535_d11su.jpg",
+      "/images/annonces/1776277046322_vzpw8.jpg",
+      "/images/annonces/1776277096008_k1m5u.jpg",
+      "/images/annonces/1776277123120_yz5kw.jpg"
+    ]
   },
   {
     "id": 2,
