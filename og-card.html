@@ -4,240 +4,104 @@
 <meta charset="UTF-8">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { width:1200px; height:630px; overflow:hidden; font-family:'Georgia', serif; background:#0A1F44; }
+  body { width:1200px; height:630px; overflow:hidden; font-family:'Georgia', serif; }
 
   .card {
     width:1200px; height:630px;
-    background: linear-gradient(135deg, #060F22 0%, #0A1F44 45%, #0d2657 100%);
+    background: linear-gradient(135deg, #060F22 0%, #0A1F44 50%, #0d2657 100%);
     position:relative; overflow:hidden;
-    display:flex; align-items:center;
-  }
-
-  /* Cercles décoratifs dorés */
-  .circle-1 {
-    position:absolute; top:-120px; right:-80px;
-    width:500px; height:500px; border-radius:50%;
-    border:1px solid rgba(201,168,76,.18);
-  }
-  .circle-2 {
-    position:absolute; top:-60px; right:-20px;
-    width:380px; height:380px; border-radius:50%;
-    border:1px solid rgba(201,168,76,.12);
-  }
-  .circle-3 {
-    position:absolute; bottom:-140px; left:-80px;
-    width:420px; height:420px; border-radius:50%;
-    border:1px solid rgba(201,168,76,.10);
-  }
-  /* Glow doré en haut à droite */
-  .glow {
-    position:absolute; top:-80px; right:-60px;
-    width:480px; height:480px; border-radius:50%;
-    background: radial-gradient(circle, rgba(201,168,76,.13) 0%, transparent 70%);
-  }
-  /* Glow bleu en bas gauche */
-  .glow-2 {
-    position:absolute; bottom:-100px; left:-60px;
-    width:400px; height:400px; border-radius:50%;
-    background: radial-gradient(circle, rgba(30,80,160,.25) 0%, transparent 70%);
-  }
-  /* Ligne dorée gauche */
-  .gold-line {
-    position:absolute; left:0; top:0; bottom:0;
-    width:5px;
-    background: linear-gradient(to bottom, transparent, #C9A84C, #C9A84C, transparent);
-  }
-
-  /* CONTENU */
-  .content {
-    position:relative; z-index:10;
     display:flex; flex-direction:column;
-    padding:0 72px; width:100%;
+    align-items:center; justify-content:center;
+    text-align:center;
   }
 
-  /* Badge */
+  /* Décoration : cercles dorés */
+  .c1 { position:absolute; top:-160px; right:-160px; width:520px; height:520px; border-radius:50%; border:1px solid rgba(201,168,76,.15); }
+  .c2 { position:absolute; top:-100px; right:-100px; width:380px; height:380px; border-radius:50%; border:1px solid rgba(201,168,76,.10); }
+  .c3 { position:absolute; bottom:-160px; left:-160px; width:480px; height:480px; border-radius:50%; border:1px solid rgba(201,168,76,.12); }
+  .c4 { position:absolute; bottom:-100px; left:-100px; width:320px; height:320px; border-radius:50%; border:1px solid rgba(201,168,76,.08); }
+
+  /* Glow centraux */
+  .glow-top    { position:absolute; top:-100px;    left:50%; transform:translateX(-50%); width:700px; height:400px; border-radius:50%; background:radial-gradient(circle, rgba(201,168,76,.07) 0%, transparent 70%); }
+  .glow-bottom { position:absolute; bottom:-100px; left:50%; transform:translateX(-50%); width:600px; height:350px; border-radius:50%; background:radial-gradient(circle, rgba(20,60,140,.25) 0%, transparent 70%); }
+
+  /* Ligne dorée en haut */
+  .top-bar { position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #C9A84C 30%, #C9A84C 70%, transparent); }
+  /* Ligne dorée en bas */
+  .bottom-bar { position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #C9A84C 30%, #C9A84C 70%, transparent); }
+
+  /* Contenu centré */
+  .content { position:relative; z-index:10; display:flex; flex-direction:column; align-items:center; gap:0; padding:0 80px; width:100%; }
+
+  /* Badge pays */
   .badge {
     display:inline-flex; align-items:center; gap:8px;
-    background: rgba(201,168,76,.12);
-    border:1px solid rgba(201,168,76,.35);
-    border-radius:30px;
-    padding:6px 18px;
-    margin-bottom:28px;
-    width:fit-content;
+    background:rgba(201,168,76,.1); border:1px solid rgba(201,168,76,.3);
+    border-radius:30px; padding:6px 20px; margin-bottom:30px;
   }
-  .badge-dot { width:7px; height:7px; border-radius:50%; background:#C9A84C; }
-  .badge-text { font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#C9A84C; font-family:'Arial', sans-serif; font-weight:600; }
+  .badge-dot { width:7px; height:7px; border-radius:50%; background:#C9A84C; flex-shrink:0; }
+  .badge-text { font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#C9A84C; font-family:Arial,sans-serif; font-weight:700; }
 
-  /* Nom */
-  .brand-name {
-    font-size:72px; font-weight:700; line-height:1;
-    color:#fff; letter-spacing:-.02em;
-    margin-bottom:6px;
-  }
-  .brand-name span { color:#C9A84C; }
+  /* Nom principal */
+  .brand { font-size:82px; font-weight:700; color:#fff; line-height:.95; letter-spacing:-.02em; margin-bottom:10px; }
+  .brand span { color:#C9A84C; }
+  .brand-sub { font-size:28px; font-weight:400; color:#C9A84C; letter-spacing:.04em; margin-bottom:6px; font-family:Georgia,serif; font-style:italic; }
 
-  .brand-sub {
-    font-size:20px; color:rgba(255,255,255,.45);
-    letter-spacing:.22em; text-transform:uppercase;
-    font-family:'Arial', sans-serif; font-weight:400;
-    margin-bottom:36px;
-  }
+  /* Tagline */
+  .tagline { font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.35); font-family:Arial,sans-serif; margin-bottom:38px; }
 
   /* Séparateur */
-  .sep {
-    width:64px; height:2px;
-    background: linear-gradient(to right, #C9A84C, transparent);
-    margin-bottom:36px;
-  }
+  .sep { width:80px; height:1px; background:linear-gradient(to right, transparent, #C9A84C, transparent); margin-bottom:38px; }
 
   /* Services */
-  .services {
-    display:flex; gap:32px; margin-bottom:40px;
-  }
-  .service {
-    display:flex; align-items:center; gap:12px;
-  }
-  .service-icon {
-    width:44px; height:44px; border-radius:12px;
-    background: rgba(201,168,76,.12);
-    border:1px solid rgba(201,168,76,.25);
-    display:flex; align-items:center; justify-content:center;
-    font-size:20px;
-  }
-  .service-label {
-    font-size:15px; color:rgba(255,255,255,.8);
-    font-family:'Arial', sans-serif; font-weight:500;
-  }
-
-  /* URL */
-  .url-line {
+  .services { display:flex; gap:20px; justify-content:center; margin-bottom:38px; }
+  .svc {
     display:flex; align-items:center; gap:10px;
-  }
-  .url-icon {
-    width:28px; height:28px; border-radius:50%;
-    background:#C9A84C;
-    display:flex; align-items:center; justify-content:center;
-    font-size:13px; color:#0A1F44; font-weight:700; font-family:Arial;
-  }
-  .url-text {
-    font-size:17px; color:#C9A84C;
-    font-family:'Arial', sans-serif; letter-spacing:.04em; font-weight:600;
-  }
-
-  /* IMAGE DROITE — photo d'ambiance */
-  .right-visual {
-    position:absolute; right:0; top:0; bottom:0;
-    width:420px;
-    background: linear-gradient(to right, #0A1F44 0%, transparent 30%),
-                linear-gradient(135deg, #0d2250 0%, #1a3a7a 50%, #0a2040 100%);
-    display:flex; flex-direction:column;
-    align-items:center; justify-content:center;
-    gap:20px; padding:40px;
-  }
-
-  /* Grandes icônes décoratives */
-  .big-icons {
-    display:flex; flex-direction:column; gap:24px;
-    align-items:center;
-  }
-  .big-icon-row { display:flex; gap:16px; }
-  .big-icon-box {
-    width:100px; height:90px; border-radius:16px;
-    background: rgba(255,255,255,.04);
-    border:1px solid rgba(201,168,76,.2);
-    display:flex; flex-direction:column;
-    align-items:center; justify-content:center;
-    gap:8px;
+    background:rgba(255,255,255,.05); border:1px solid rgba(201,168,76,.22);
+    border-radius:14px; padding:12px 22px;
     backdrop-filter:blur(4px);
   }
-  .big-icon-box .ico { font-size:32px; }
-  .big-icon-box .lbl {
-    font-size:10px; color:rgba(255,255,255,.5);
-    font-family:Arial; text-transform:uppercase;
-    letter-spacing:.08em; text-align:center; line-height:1.2;
-  }
-  .big-icon-box.gold {
-    background: rgba(201,168,76,.1);
-    border-color: rgba(201,168,76,.4);
-  }
-  .big-icon-box.gold .lbl { color:rgba(201,168,76,.8); }
+  .svc-ico { font-size:22px; }
+  .svc-lbl { font-size:15px; color:rgba(255,255,255,.85); font-family:Arial,sans-serif; font-weight:500; white-space:nowrap; }
 
-  /* Tagline droite */
-  .right-tag {
-    font-size:12px; color:rgba(255,255,255,.3);
-    font-family:Arial; letter-spacing:.1em;
-    text-transform:uppercase; text-align:center;
-  }
+  /* URL */
+  .url-row { display:flex; align-items:center; gap:10px; }
+  .url-dot { width:8px; height:8px; border-radius:50%; background:#C9A84C; }
+  .url { font-size:16px; color:rgba(201,168,76,.85); font-family:Arial,sans-serif; letter-spacing:.06em; font-weight:600; }
 </style>
 </head>
 <body>
 <div class="card">
-  <!-- Déco -->
-  <div class="circle-1"></div>
-  <div class="circle-2"></div>
-  <div class="circle-3"></div>
-  <div class="glow"></div>
-  <div class="glow-2"></div>
-  <div class="gold-line"></div>
+  <div class="c1"></div><div class="c2"></div>
+  <div class="c3"></div><div class="c4"></div>
+  <div class="glow-top"></div>
+  <div class="glow-bottom"></div>
+  <div class="top-bar"></div>
+  <div class="bottom-bar"></div>
 
-  <!-- Contenu gauche -->
   <div class="content">
     <div class="badge">
       <div class="badge-dot"></div>
-      <span class="badge-text">Abidjan · Côte d'Ivoire</span>
+      <span class="badge-text">Abidjan &nbsp;·&nbsp; Côte d'Ivoire</span>
     </div>
 
-    <div class="brand-name">RAZAK <span>Multi</span><br>Service</div>
+    <div class="brand">RAZAK <span>Multi</span> Service</div>
     <div class="brand-sub">Excellence &amp; Confiance</div>
+    <div class="tagline">Automobile &nbsp;·&nbsp; Immobilier &nbsp;·&nbsp; Ameublement</div>
 
     <div class="sep"></div>
 
     <div class="services">
-      <div class="service">
-        <div class="service-icon">🚗</div>
-        <span class="service-label">Automobile</span>
-      </div>
-      <div class="service">
-        <div class="service-icon">🏠</div>
-        <span class="service-label">Immobilier</span>
-      </div>
-      <div class="service">
-        <div class="service-icon">🛋️</div>
-        <span class="service-label">Ameublement</span>
-      </div>
+      <div class="svc"><div class="svc-ico">🚗</div><span class="svc-lbl">Véhicules à vendre &amp; location</span></div>
+      <div class="svc"><div class="svc-ico">🏠</div><span class="svc-lbl">Biens immobiliers</span></div>
+      <div class="svc"><div class="svc-ico">🛋️</div><span class="svc-lbl">Meubles &amp; décoration</span></div>
     </div>
 
-    <div class="url-line">
-      <div class="url-icon">R</div>
-      <span class="url-text">razak-multiservices.com</span>
+    <div class="url-row">
+      <div class="url-dot"></div>
+      <span class="url">razak-multiservices.com</span>
+      <div class="url-dot"></div>
     </div>
-  </div>
-
-  <!-- Visuel droite -->
-  <div class="right-visual">
-    <div class="big-icons">
-      <div class="big-icon-row">
-        <div class="big-icon-box gold">
-          <div class="ico">🚗</div>
-          <div class="lbl">Véhicules<br>à vendre</div>
-        </div>
-        <div class="big-icon-box">
-          <div class="ico">🔑</div>
-          <div class="lbl">Location<br>véhicules</div>
-        </div>
-      </div>
-      <div class="big-icon-row">
-        <div class="big-icon-box">
-          <div class="ico">🏡</div>
-          <div class="lbl">Villas &<br>Apparts</div>
-        </div>
-        <div class="big-icon-box gold">
-          <div class="ico">🛋️</div>
-          <div class="lbl">Meubles &<br>Déco</div>
-        </div>
-      </div>
-    </div>
-    <div class="right-tag">Votre partenaire de confiance</div>
   </div>
 </div>
 </body>
