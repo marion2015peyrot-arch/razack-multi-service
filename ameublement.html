@@ -8,20 +8,28 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <style>
-    .categories-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
-    .cat-btn { padding: 10px 20px; border-radius: 30px; border: 1.5px solid var(--gray-200); background: var(--white); font-weight: 600; font-size: .875rem; color: var(--gray-600); cursor: pointer; transition: var(--transition); font-family: var(--font-body); display: flex; align-items: center; gap: 6px; }
-    .cat-btn:hover, .cat-btn.active { border-color: var(--gold); background: rgba(201,168,76,.08); color: var(--navy); }
+    /* ── NAVIGATION PIÈCES ── */
+    .rooms-nav { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 8px; scrollbar-width: none; }
+    .rooms-nav::-webkit-scrollbar { display: none; }
+    .room-tab { display: flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 30px; border: 1.5px solid var(--gray-200); background: var(--white); font-weight: 600; font-size: .875rem; color: var(--gray-600); cursor: pointer; transition: var(--transition); white-space: nowrap; font-family: var(--font-body); }
+    .room-tab:hover, .room-tab.active { border-color: var(--gold); background: rgba(201,168,76,.08); color: var(--navy); }
+
+    /* ── SOUS-CATÉGORIES ── */
+    .subcats-nav { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 24px; scrollbar-width: none; flex-wrap: wrap; }
+    .subcats-nav::-webkit-scrollbar { display: none; }
+    .subcat-btn { padding: 5px 13px; border-radius: 20px; border: 1px solid var(--gray-200); background: var(--white); font-size: .78rem; color: var(--gray-600); cursor: pointer; transition: var(--transition); font-family: var(--font-body); white-space: nowrap; }
+    .subcat-btn:hover { border-color: var(--navy); color: var(--navy); }
+    .subcat-btn.active { border-color: var(--navy); background: var(--navy); color: var(--white); }
+    .subcat-btn.soon { opacity: .55; }
+
+    /* ── SECTION PIÈCE ── */
+    .room-section { margin-bottom: 52px; }
+    .room-section-title { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--navy); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--gray-200); display: flex; align-items: center; gap: 10px; }
+
+    /* ── CARTES PRODUITS ── */
     .meuble-card { background: var(--white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); border: 1px solid var(--gray-200); }
     .meuble-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-    .meuble-image { height: 200px; position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
-    .meuble-image.salon { background: linear-gradient(135deg, #3a2a1a, #5a4228); }
-    .meuble-image.chambre { background: linear-gradient(135deg, #1a2a3a, #2a4060); }
-    .meuble-image.salle-manger { background: linear-gradient(135deg, #2a1a2a, #4a2a4a); }
-    .meuble-image.bureau { background: linear-gradient(135deg, #0A1F44, #1a3a6e); }
-    .meuble-image.decoration { background: linear-gradient(135deg, #1a3a2e, #2d5a46); }
-    .meuble-image.pack { background: linear-gradient(135deg, #3a1a0a, #6a3010); }
-    .meuble-image.tv { background: linear-gradient(135deg, #1a1a2e, #2a2a4e); }
-    .meuble-image.cuisine { background: linear-gradient(135deg, #2a3a1a, #4a6028); }
+    .meuble-image { height: 200px; position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; background: linear-gradient(135deg, #1a2a3a, #0A1F44); }
     .meuble-body { padding: 20px; }
     .meuble-cat { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
     .meuble-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
@@ -29,7 +37,20 @@
     .meuble-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; }
     .meuble-tag { background: var(--off-white); color: var(--gray-600); padding: 3px 8px; border-radius: 20px; font-size: .7rem; }
     .meuble-price { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--gold); margin-bottom: 14px; }
-    .meuble-price .old-price { font-size: .8rem; color: var(--gray-400); text-decoration: line-through; font-family: var(--font-body); font-weight: 400; margin-left: 8px; }
+
+    /* ── BIENTÔT DISPONIBLE ── */
+    .coming-soon-section-label { font-size: .78rem; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: .1em; margin: 28px 0 14px; display: flex; align-items: center; gap: 8px; }
+    .coming-soon-section-label::after { content: ''; flex: 1; height: 1px; background: var(--gray-200); }
+    .coming-soon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+    .cs-card { background: var(--white); border: 2px dashed var(--gray-200); border-radius: var(--radius-md); padding: 18px 12px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; transition: var(--transition); }
+    .cs-card:hover { border-color: var(--gold); }
+    .cs-card .cs-emoji { font-size: 1.6rem; }
+    .cs-card .cs-name { font-size: .8rem; font-weight: 600; color: var(--navy); line-height: 1.3; }
+    .cs-card .cs-badge { background: var(--off-white); color: var(--gray-400); padding: 2px 10px; border-radius: 20px; font-size: .65rem; letter-spacing: .04em; font-weight: 600; }
+    .cs-card .cs-link { font-size: .7rem; color: var(--gold); text-decoration: none; font-weight: 600; margin-top: 4px; }
+    .cs-card .cs-link:hover { text-decoration: underline; }
+
+    /* ── PACKS & AUTRES ── */
     .pack-highlight { background: linear-gradient(135deg, var(--navy), var(--navy-light)); color: var(--white); border-radius: var(--radius-lg); padding: 40px; margin-bottom: 24px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
     .pack-highlight h3 { font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 12px; }
     .pack-highlight p { color: rgba(255,255,255,.75); margin-bottom: 20px; line-height: 1.6; }
@@ -46,6 +67,7 @@
     @media(max-width:768px) {
       .avantages-ameublement { grid-template-columns: 1fr 1fr; }
       .pack-highlight { grid-template-columns: 1fr; }
+      .coming-soon-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
     }
   </style>
 <style>
@@ -132,20 +154,24 @@
 <section class="section" style="background:var(--off-white)">
   <div class="container">
 
-    <!-- CATÉGORIES -->
-    <div class="categories-nav" id="categoriesNav">
-      <button class="cat-btn active" onclick="filterCat('')">🏠 Tout voir</button>
-      <button class="cat-btn" onclick="filterCat('Salon')">🛋️ Salon</button>
-      <button class="cat-btn" onclick="filterCat('Chambre')">🛏️ Chambre</button>
-      <button class="cat-btn" onclick="filterCat('Salle à manger')">🍽️ Salle à manger</button>
-      <button class="cat-btn" onclick="filterCat('Bureau')">💼 Bureau</button>
-      <button class="cat-btn" onclick="filterCat('Meuble TV')">📺 Meuble TV</button>
-      <button class="cat-btn" onclick="filterCat('Décoration')">🎨 Décoration</button>
-      <button class="cat-btn" onclick="filterCat('Pack')">📦 Packs</button>
+    <!-- NAVIGATION PIÈCES -->
+    <div class="rooms-nav" id="roomsNav">
+      <button class="room-tab active" onclick="selectRoom('all',this)">🏠 Tout voir</button>
+      <button class="room-tab" onclick="selectRoom('salon',this)">🛋️ Salon</button>
+      <button class="room-tab" onclick="selectRoom('chambre',this)">🛏️ Chambre</button>
+      <button class="room-tab" onclick="selectRoom('salle-manger',this)">🍽️ Salle à manger</button>
+      <button class="room-tab" onclick="selectRoom('cuisine',this)">🍳 Cuisine</button>
+      <button class="room-tab" onclick="selectRoom('salle-bain',this)">🚿 Salle de bain</button>
+      <button class="room-tab" onclick="selectRoom('entree',this)">🚪 Entrée / Couloir</button>
+      <button class="room-tab" onclick="selectRoom('exterieur',this)">🌿 Extérieur</button>
+      <button class="room-tab" onclick="selectRoom('general',this)">💡 Général</button>
     </div>
 
+    <!-- SOUS-CATÉGORIES (affichées après sélection d'une pièce) -->
+    <div class="subcats-nav" id="subcatsNav" style="display:none"></div>
+
     <!-- FILTRES -->
-    <div class="filters-section" style="margin-bottom:24px">
+    <div class="filters-section" style="margin-bottom:20px">
       <div class="filters-grid" style="grid-template-columns:1fr 1fr 1fr">
         <div class="filter-group">
           <label class="filter-label">Budget max</label>
@@ -174,8 +200,8 @@
     </div>
 
     <!-- RÉSULTATS -->
-    <div class="result-count" id="ameubleResultCount" style="margin-bottom:24px"></div>
-    <div class="listing-grid" id="ameubleGrid"></div>
+    <div class="result-count" id="ameubleResultCount" style="margin-bottom:20px"></div>
+    <div id="ameubleGrid"></div>
 
   </div>
 </section>
@@ -384,81 +410,173 @@
 <button id="backToTop" aria-label="Retour en haut">↑</button>
 
 <script>
+/* ═══════════════════════════════════════════
+   TAXONOMIE DES PIÈCES & SOUS-CATÉGORIES
+═══════════════════════════════════════════ */
+const ROOMS = [
+  { id:'salon',       name:'Salon',            emoji:'🛋️', cats:['Canapé','Fauteuils','Table basse','Meuble TV','Bibliothèque / étagères','Tapis','Rideaux / stores','Lampadaire / luminaires','Tables d\'appoint','Décoration'] },
+  { id:'chambre',     name:'Chambre',          emoji:'🛏️', cats:['Lit','Matelas','Tables de chevet','Armoire / dressing','Commode','Bureau','Chaise','Miroir','Rideaux','Linge de lit'] },
+  { id:'salle-manger',name:'Salle à manger',   emoji:'🍽️', cats:['Table à manger','Chaises','Buffet / vaisselier','Nappe / chemin de table','Luminaires','Décoration de table'] },
+  { id:'cuisine',     name:'Cuisine',          emoji:'🍳', cats:['Meubles de rangement','Plan de travail','Étagères','Table / coin repas','Tabourets','Électroménager','Ustensiles','Évier et accessoires'] },
+  { id:'salle-bain',  name:'Salle de bain',    emoji:'🚿', cats:['Meuble sous lavabo','Miroir','Étagères','Porte-serviettes','Panier à linge','Rideau de douche','Accessoires'] },
+  { id:'entree',      name:'Entrée / Couloir', emoji:'🚪', cats:['Meuble à chaussures','Porte-manteaux','Console','Miroir','Banc'] },
+  { id:'exterieur',   name:'Extérieur',        emoji:'🌿', cats:['Salon de jardin','Chaises extérieures','Table extérieure','Transats','Parasol','Décoration extérieure'] },
+  { id:'general',     name:'Éléments généraux',emoji:'💡', cats:['Éclairage','Décoration murale','Tapis','Rideaux','Climatisation / ventilateurs','Rangements'] },
+];
+
+const ROOM_EMOJIS = { Canapé:'🛋️',Fauteuils:'🪑','Table basse':'☕','Meuble TV':'📺','Bibliothèque / étagères':'📚',Tapis:'🎌','Rideaux / stores':'🪟','Lampadaire / luminaires':'💡','Tables d\'appoint':'🪵',Décoration:'🎨',Lit:'🛏️',Matelas:'😴','Tables de chevet':'🌙','Armoire / dressing':'👗',Commode:'🗃️',Bureau:'🖥️',Chaise:'🪑',Miroir:'🪞',Rideaux:'🪟','Linge de lit':'🛌','Table à manger':'🍽️',Chaises:'🪑','Buffet / vaisselier':'🍶','Nappe / chemin de table':'🎀',Luminaires:'💡','Décoration de table':'🕯️','Meubles de rangement':'📦','Plan de travail':'🔧',Étagères:'📚','Table / coin repas':'🍽️',Tabourets:'🪑',Électroménager:'🔌',Ustensiles:'🍴','Évier et accessoires':'🚿','Meuble sous lavabo':'🪠','Porte-serviettes':'🧴','Panier à linge':'🧺','Rideau de douche':'🚿',Accessoires:'🧴','Meuble à chaussures':'👟','Porte-manteaux':'🧥',Console:'🪵',Banc:'🛋️','Salon de jardin':'🌴','Chaises extérieures':'🪑','Table extérieure':'🌿',Transats:'🏖️',Parasol:'☂️','Décoration extérieure':'🌺',Éclairage:'💡','Décoration murale':'🖼️','Climatisation / ventilateurs':'❄️',Rangements:'📦' };
+
 let MEUBLES = [];
+let activeRoom = 'all';
+let activeCat  = '';
 
 const fmt = n => new Intl.NumberFormat('fr-CI').format(n) + ' FCFA';
-const waProduct = p => `https://wa.me/2250797388202?text=${encodeURIComponent(`Bonjour RAZAK Multi Service,\n\nJe suis intéressé(e) par ce meuble :\n\n🛋️ ${p.titre}\n💰 Prix : ${fmt(p.prix)}\n\nPouvez-vous me donner plus d'informations sur la disponibilité et les délais de livraison ?`)}`;
 
+const waProduct    = p   => `https://wa.me/2250797388202?text=${encodeURIComponent(`Bonjour RAZAK Multi Service,\n\nJe suis intéressé(e) par :\n\n🛋️ ${p.cat} — ${p.titre}\n💰 Prix : ${fmt(p.prix)}\n\nPouvez-vous me donner plus d'informations sur la disponibilité et les délais de livraison ?`)}`;
+const waComingSoon = cat => `https://wa.me/2250797388202?text=${encodeURIComponent(`Bonjour RAZAK Multi Service,\n\nJe suis intéressé(e) par : ${cat}\n\nEst-ce disponible ou quand sera-t-il disponible ?`)}`;
+
+/* ── Carte produit disponible ── */
 const renderMeuble = m => `
 <div class="meuble-card">
   <div class="meuble-image">
     ${photoHtml(m, m.titre)}
     <span class="listing-badge badge-available" style="position:absolute;top:12px;left:12px">Disponible</span>
-    ${m.cat === 'Pack' ? '<span style="position:absolute;top:12px;right:12px;background:var(--gold);color:var(--navy);padding:4px 10px;border-radius:20px;font-size:.7rem;font-weight:700">📦 PACK</span>' : ''}
   </div>
   <div class="meuble-body">
     <div class="meuble-cat">${m.cat}</div>
     <div class="meuble-title">${m.titre}</div>
     <div class="meuble-desc">${m.desc}</div>
-    <div class="meuble-tags">${m.tags.map(t => `<span class="meuble-tag">${t}</span>`).join('')}</div>
+    <div class="meuble-tags">${(m.tags||[]).map(t=>`<span class="meuble-tag">${t}</span>`).join('')}</div>
     <div class="meuble-price">${fmt(m.prix)}</div>
-    <div style="display:flex;gap:8px">
-      <a href="${waProduct(m)}" target="_blank" class="btn btn-whatsapp btn-sm btn-full">📱 Je suis intéressé(e)</a>
-    </div>
-    <a href="https://wa.me/?text=${encodeURIComponent('🛋️ Regarde ce meuble sur RAZAK Multi Service !\n\n' + m.titre + '\n💰 ' + fmt(m.prix) + '\n\n👉 https://razak-multiservices.com/ameublement.html')}" target="_blank" class="btn btn-outline btn-sm btn-full" style="margin-top:6px">🔗 Partager</a>
+    <a href="${waProduct(m)}" target="_blank" class="btn btn-whatsapp btn-sm btn-full">📱 Je suis intéressé(e)</a>
+    <a href="https://wa.me/?text=${encodeURIComponent('🛋️ Regarde ce meuble sur RAZAK Multi Service !\n\n'+m.titre+'\n💰 '+fmt(m.prix)+'\n\n👉 https://razak-multiservices.com/ameublement.html')}" target="_blank" class="btn btn-outline btn-sm btn-full" style="margin-top:6px">🔗 Partager</a>
   </div>
 </div>`;
 
-let currentCat = '';
+/* ── Carte "bientôt disponible" ── */
+const renderCS = cat => `
+<div class="cs-card">
+  <div class="cs-emoji">${ROOM_EMOJIS[cat]||'📦'}</div>
+  <div class="cs-name">${cat}</div>
+  <span class="cs-badge">Bientôt disponible</span>
+  <a href="${waComingSoon(cat)}" target="_blank" class="cs-link">📱 Nous contacter</a>
+</div>`;
 
-const filterCat = (cat) => {
-  currentCat = cat;
-  document.querySelectorAll('.cat-btn').forEach(b => {
-    b.classList.toggle('active', (cat === '' && b.textContent.includes('Tout voir')) || b.textContent.includes(cat));
-  });
-  applyAmeubleFilters();
-};
+/* ── Sélection d'une pièce ── */
+function selectRoom(roomId, btn) {
+  activeRoom = roomId;
+  activeCat  = '';
+  document.querySelectorAll('.room-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  buildSubcatsNav();
+  renderCatalog();
+}
 
-const applyAmeubleFilters = () => {
+/* ── Sélection d'une sous-catégorie ── */
+function selectCat(cat, btn) {
+  activeCat = cat;
+  document.querySelectorAll('.subcat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCatalog();
+}
+
+/* ── Construction du nav sous-catégories ── */
+function buildSubcatsNav() {
+  const nav = document.getElementById('subcatsNav');
+  if (activeRoom === 'all') { nav.style.display = 'none'; return; }
+  const room = ROOMS.find(r => r.id === activeRoom);
+  if (!room) { nav.style.display = 'none'; return; }
+  nav.style.display = 'flex';
+  nav.innerHTML = `<button class="subcat-btn active" onclick="selectCat('',this)">Tout</button>` +
+    room.cats.map(cat => {
+      const has = MEUBLES.some(m => m.room === activeRoom && m.cat === cat);
+      return `<button class="subcat-btn${has?'':' soon'}" onclick="selectCat(${JSON.stringify(cat)},this)">${cat}${has?'':' 🔜'}</button>`;
+    }).join('');
+}
+
+/* ── Rendu principal du catalogue ── */
+function renderCatalog() {
+  const grid   = document.getElementById('ameubleGrid');
+  const count  = document.getElementById('ameubleResultCount');
   const budget = document.getElementById('af-budget').value;
-  const sort = document.getElementById('af-sort').value;
+  const sort   = document.getElementById('af-sort').value;
   const search = document.getElementById('af-search').value.toLowerCase().trim();
 
-  let list = MEUBLES.filter(m => {
-    if (currentCat && m.cat !== currentCat) return false;
+  const matchFilters = m => {
+    if (m.room === 'pack') return false;
     if (budget && m.prix > parseInt(budget)) return false;
-    if (search && !`${m.titre} ${m.cat} ${m.desc}`.toLowerCase().includes(search)) return false;
+    if (search && !`${m.titre} ${m.cat} ${m.desc||''}`.toLowerCase().includes(search)) return false;
     return true;
-  });
+  };
 
-  if (sort === 'price-asc') list.sort((a,b) => a.prix - b.prix);
-  else if (sort === 'price-desc') list.sort((a,b) => b.prix - a.prix);
+  if (activeRoom === 'all') {
+    /* ── Vue globale : sections par pièce ── */
+    count.textContent = '';
+    let html = '';
+    for (const room of ROOMS) {
+      let prods = MEUBLES.filter(m => m.room === room.id && matchFilters(m));
+      if (sort === 'price-asc') prods.sort((a,b)=>a.prix-b.prix);
+      else if (sort === 'price-desc') prods.sort((a,b)=>b.prix-a.prix);
+      const missing = room.cats.filter(cat => !MEUBLES.some(m => m.room === room.id && m.cat === cat));
 
-  const grid = document.getElementById('ameubleGrid');
-  const count = document.getElementById('ameubleResultCount');
-  count.textContent = `${list.length} produit${list.length !== 1 ? 's' : ''} trouvé${list.length !== 1 ? 's' : ''}`;
-  grid.innerHTML = list.length ? list.map(renderMeuble).join('') : `<div class="no-results" style="grid-column:1/-1"><div class="no-results-icon">🛋️</div><h3>Aucun produit trouvé</h3><p>Contactez-nous pour une commande sur mesure.</p><a href="https://wa.me/2250797388202" target="_blank" class="btn btn-whatsapp">📱 Nous contacter</a></div>`;
-};
+      html += `<div class="room-section">
+        <div class="room-section-title">${room.emoji} ${room.name}</div>`;
+      if (prods.length) html += `<div class="listing-grid">${prods.map(renderMeuble).join('')}</div>`;
+      if (missing.length) {
+        html += `<div class="coming-soon-section-label">🔜 Bientôt disponible</div>
+          <div class="coming-soon-grid">${missing.map(renderCS).join('')}</div>`;
+      }
+      html += `</div>`;
+    }
+    grid.innerHTML = html || `<div class="no-results"><div class="no-results-icon">🛋️</div><h3>Aucun résultat</h3><p>Modifiez vos filtres ou <a href="https://wa.me/2250797388202" target="_blank" class="btn btn-whatsapp" style="display:inline-block;margin-top:10px">📱 Contactez-nous</a></p></div>`;
 
+  } else {
+    /* ── Vue pièce spécifique ── */
+    const room = ROOMS.find(r => r.id === activeRoom);
+    if (!room) return;
+    const catsScope = activeCat ? [activeCat] : room.cats;
+
+    let prods = MEUBLES.filter(m => m.room === activeRoom && (!activeCat || m.cat === activeCat) && matchFilters(m));
+    if (sort === 'price-asc') prods.sort((a,b)=>a.prix-b.prix);
+    else if (sort === 'price-desc') prods.sort((a,b)=>b.prix-a.prix);
+
+    const missing = catsScope.filter(cat => !MEUBLES.some(m => m.room === activeRoom && m.cat === cat));
+
+    count.textContent = prods.length ? `${prods.length} produit${prods.length>1?'s':''} disponible${prods.length>1?'s':''}` : '';
+
+    let html = '';
+    if (prods.length) html += `<div class="listing-grid">${prods.map(renderMeuble).join('')}</div>`;
+    if (missing.length) {
+      html += `<div class="coming-soon-section-label">🔜 Bientôt disponible dans ${room.name}</div>
+        <div class="coming-soon-grid">${missing.map(renderCS).join('')}</div>`;
+    }
+    if (!prods.length && !missing.length) {
+      html = `<div class="no-results"><div class="no-results-icon">🛋️</div><h3>Aucun résultat</h3><p>Modifiez vos filtres.</p></div>`;
+    }
+    grid.innerHTML = html;
+  }
+}
+
+/* ── Formulaire devis ── */
 document.getElementById('devisAmeubleForm').addEventListener('submit', e => {
   e.preventDefault();
-  const nom = document.getElementById('da-nom').value;
-  const tel = document.getElementById('da-tel').value;
-  const type = document.getElementById('da-type').value;
-  const budget = document.getElementById('da-budget').value;
-  const lieu = document.getElementById('da-lieu').value;
+  const nom   = document.getElementById('da-nom').value;
+  const tel   = document.getElementById('da-tel').value;
+  const type  = document.getElementById('da-type').value;
+  const budget= document.getElementById('da-budget').value;
+  const lieu  = document.getElementById('da-lieu').value;
   const delai = document.getElementById('da-delai').value;
-  const desc = document.getElementById('da-description').value;
-  const text = `Bonjour RAZAK Multi Service,\n\nDemande de devis ameublement :\n\n👤 Nom : ${nom}\n📱 WhatsApp : ${tel}\n🏠 Type de projet : ${type}\n💰 Budget : ${budget}\n📍 Localisation : ${lieu}\n⏱️ Délai : ${delai}\n\n📝 Description :\n${desc}`;
+  const desc  = document.getElementById('da-description').value;
+  const text  = `Bonjour RAZAK Multi Service,\n\nDemande de devis ameublement :\n\n👤 Nom : ${nom}\n📱 WhatsApp : ${tel}\n🏠 Type de projet : ${type}\n💰 Budget : ${budget}\n📍 Localisation : ${lieu}\n⏱️ Délai : ${delai}\n\n📝 Description :\n${desc}`;
   window.open(`https://wa.me/2250797388202?text=${encodeURIComponent(text)}`, '_blank');
 });
 
 document.addEventListener('DOMContentLoaded', () => {
   fetch('data/ameublement.json?v=' + Date.now())
     .then(r => r.json())
-    .then(data => { MEUBLES = data; applyAmeubleFilters(); });
-  ['af-budget','af-sort'].forEach(id => document.getElementById(id).addEventListener('change', applyAmeubleFilters));
-  document.getElementById('af-search').addEventListener('input', applyAmeubleFilters);
+    .then(data => { MEUBLES = data; renderCatalog(); });
+  ['af-budget','af-sort'].forEach(id => document.getElementById(id).addEventListener('change', renderCatalog));
+  document.getElementById('af-search').addEventListener('input', renderCatalog);
 });
 </script>
 <script src="js/main.js"></script>

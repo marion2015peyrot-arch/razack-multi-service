@@ -473,7 +473,8 @@ function getForm(tab, item = {}) {
 
   if (tab === 'ameublement') return `<div class="form-grid">
     <div class="form-group full"><label>Titre *</label><input name="titre" value="${v.titre||''}" required placeholder="Canapé d'angle moderne"></div>
-    <div class="form-group"><label>Catégorie</label>${sel('cat',[{v:'Salon',l:'Salon'},{v:'Chambre',l:'Chambre'},{v:'Salle à manger',l:'Salle à manger'},{v:'Bureau',l:'Bureau'},{v:'Meuble TV',l:'Meuble TV'},{v:'Décoration',l:'Décoration'},{v:'Pack',l:'Pack'}],v.cat)}</div>
+    <div class="form-group"><label>Pièce</label>${sel('room',[{v:'salon',l:'🛋️ Salon'},{v:'chambre',l:'🛏️ Chambre'},{v:'salle-manger',l:'🍽️ Salle à manger'},{v:'cuisine',l:'🍳 Cuisine'},{v:'salle-bain',l:'🚿 Salle de bain'},{v:'entree',l:'🚪 Entrée / Couloir'},{v:'exterieur',l:'🌿 Extérieur'},{v:'general',l:'💡 Général'},{v:'pack',l:'📦 Pack'}],v.room||'salon')}</div>
+    <div class="form-group"><label>Sous-catégorie</label><input name="cat" value="${v.cat||''}" placeholder="Ex: Canapé, Fauteuils, Lit, Armoire…"></div>
     <div class="form-group"><label>Prix (FCFA) *</label><input name="prix" type="number" value="${v.prix||0}" required></div>
     <div class="form-group"><label>Statut</label>${sel('statut',[{v:'available',l:'Disponible'},{v:'sold',l:'Vendu'}],v.statut)}</div>
     <div class="form-group"><label>Emoji</label><input name="emoji" value="${v.emoji||'🛋️'}" style="font-size:1.3rem"></div>

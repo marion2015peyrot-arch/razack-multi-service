@@ -1,15 +1,12 @@
 [
   {
     "id": 1,
-    "cat": "Salon",
+    "room": "salon",
+    "cat": "Canapé",
     "titre": "Salon complet 7 places en L",
-    "desc": "Canapé 7 places en L, \nTissu velou ou din, confortable et élégant. \nDisponible en plusieurs coloris.",
+    "desc": "Canapé 7 places en L, tissu velou ou din, confortable et élégant. Disponible en plusieurs coloris.",
     "prix": 190000,
-    "tags": [
-      "Tissu velou et din",
-      "7 places en L",
-      "Livraison incluse"
-    ],
+    "tags": ["Tissu velou et din", "7 places en L", "Livraison incluse"],
     "emoji": "🛋️",
     "statut": "available",
     "photos": [
@@ -22,14 +19,13 @@
   },
   {
     "id": 2,
-    "cat": "Salon",
-    "titre": "FAUTEUILS L 5 PLACES",
-    "desc": "FAUTEUILS L EN VELOU OU DIN. PLUSIEURS COULEURS",
+    "room": "salon",
+    "cat": "Fauteuils",
+    "titre": "Fauteuils L 5 places",
+    "desc": "Fauteuils L en velou ou din. Plusieurs couleurs disponibles.",
     "prix": 120000,
-    "tags": [
-      "FAUTEUILS L"
-    ],
-    "emoji": "",
+    "tags": ["Fauteuils L", "5 places", "Plusieurs couleurs"],
+    "emoji": "🪑",
     "statut": "available",
     "photos": [
       "/images/annonces/1776277510324_93n1r.jpg",
@@ -40,14 +36,13 @@
   },
   {
     "id": 3,
-    "cat": "Salon",
+    "room": "salon",
+    "cat": "Canapé",
     "titre": "Salon complet 6 places",
-    "desc": "Salon complet 6 places\nen velou ou din",
+    "desc": "Salon complet 6 places en velou ou din.",
     "prix": 160000,
-    "tags": [
-      "Salon complet 6 places"
-    ],
-    "emoji": "",
+    "tags": ["6 places", "Velou ou din"],
+    "emoji": "🛋️",
     "statut": "available",
     "photos": [
       "/images/annonces/1776277936591_bkkj2.jpg",
@@ -56,14 +51,13 @@
   },
   {
     "id": 4,
-    "cat": "Salon",
-    "titre": "SALON COMPLET 7 PLACES",
-    "desc": "HAUT STANDING, \nFAIT EN VELOU OU DIN\nTOUTES COULEURS CONFONDUES",
+    "room": "salon",
+    "cat": "Canapé",
+    "titre": "Salon complet 7 places Haut Standing",
+    "desc": "Haut standing, fait en velou ou din. Toutes couleurs confondues.",
     "prix": 250000,
-    "tags": [
-      "SALON HAUT STANDING 7 PLACES"
-    ],
-    "emoji": "",
+    "tags": ["Haut standing", "7 places", "Toutes couleurs"],
+    "emoji": "🛋️",
     "statut": "available",
     "photos": [
       "/images/annonces/1776278507824_pi0p2.jpg",
@@ -73,116 +67,89 @@
   },
   {
     "id": 5,
-    "cat": "Salon",
+    "room": "salon",
+    "cat": "Canapé",
     "titre": "Salon complet 7 places + table",
     "desc": "Ensemble salon complet : canapé 3 places + 2 fauteuils + table basse + tapis. Livraison incluse.",
     "prix": 650000,
-    "tags": [
-      "Complet",
-      "7 places",
-      "Tapis inclus",
-      "Livraison"
-    ],
+    "tags": ["Complet", "7 places", "Tapis inclus", "Livraison"],
     "emoji": "🛋️",
     "statut": "available"
   },
   {
     "id": 6,
-    "cat": "Chambre",
+    "room": "chambre",
+    "cat": "Armoire / dressing",
     "titre": "Armoire penderie 3 portes miroir",
     "desc": "Grande armoire 3 portes avec miroir intégré. Nombreux rangements intérieurs, finition blanc mat.",
     "prix": 220000,
-    "tags": [
-      "Miroir",
-      "3 portes",
-      "Blanc mat"
-    ],
+    "tags": ["Miroir", "3 portes", "Blanc mat"],
     "emoji": "🚪",
     "statut": "available"
   },
   {
     "id": 7,
+    "room": "salon",
     "cat": "Meuble TV",
     "titre": "Meuble TV suspendu design",
     "desc": "Meuble TV flottant avec niches de rangement. Design épuré, idéal pour salon moderne.",
     "prix": 145000,
-    "tags": [
-      "Flottant",
-      "Design",
-      "Rangement"
-    ],
+    "tags": ["Flottant", "Design", "Rangement"],
     "emoji": "📺",
     "statut": "available"
   },
   {
     "id": 8,
+    "room": "salon",
     "cat": "Décoration",
     "titre": "Set décoratif salon complet",
     "desc": "Ensemble de décoration : coussins décoratifs, vases, bougies, cadres. Pour donner vie à votre intérieur.",
     "prix": 85000,
-    "tags": [
-      "Ensemble complet",
-      "Coussins",
-      "Vases",
-      "Cadres"
-    ],
+    "tags": ["Ensemble complet", "Coussins", "Vases", "Cadres"],
     "emoji": "🎨",
     "statut": "available"
   },
   {
     "id": 9,
+    "room": "pack",
     "cat": "Pack",
     "titre": "Pack Chambre Complète",
     "desc": "Tout pour votre chambre : lit 160x200 + matelas + armoire + table de nuit x2 + commode. Livraison incluse.",
     "prix": 680000,
-    "tags": [
-      "Complet",
-      "Matelas inclus",
-      "2 tables de nuit",
-      "Livraison"
-    ],
+    "tags": ["Complet", "Matelas inclus", "2 tables de nuit", "Livraison"],
     "emoji": "📦",
     "statut": "available"
   },
   {
     "id": 10,
+    "room": "chambre",
     "cat": "Bureau",
     "titre": "Fauteuil ergonomique direction",
     "desc": "Fauteuil de direction en cuir véritable, réglable en hauteur, accoudoirs rembourrés. Confort optimal.",
     "prix": 120000,
-    "tags": [
-      "Cuir véritable",
-      "Ergonomique",
-      "Réglable"
-    ],
+    "tags": ["Cuir véritable", "Ergonomique", "Réglable"],
     "emoji": "🪑",
     "statut": "available"
   },
   {
     "id": 11,
-    "cat": "Salle à manger",
+    "room": "salle-manger",
+    "cat": "Buffet / vaisselier",
     "titre": "Buffet vaisselier moderne",
     "desc": "Buffet 2 portes + 2 tiroirs + vitrine supérieure. Finition chêne clair, design contemporain.",
     "prix": 195000,
-    "tags": [
-      "Vitrine",
-      "Chêne clair",
-      "Rangement"
-    ],
+    "tags": ["Vitrine", "Chêne clair", "Rangement"],
     "emoji": "🍽️",
     "statut": "available"
   },
   {
     "id": 12,
+    "room": "pack",
     "cat": "Pack",
     "titre": "Pack Bureau Complet PME",
     "desc": "Aménagement complet pour 4 postes de travail : bureaux, fauteuils, caissons, armoire archives. Installation incluse.",
     "prix": 1200000,
-    "tags": [
-      "4 postes",
-      "Professionnel",
-      "Installation incluse"
-    ],
+    "tags": ["4 postes", "Professionnel", "Installation incluse"],
     "emoji": "📦",
     "statut": "available"
   }
