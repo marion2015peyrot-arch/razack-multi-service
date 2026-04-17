@@ -110,17 +110,25 @@
   },
   {
     "id": 7,
-    "cat": "Meuble TV",
-    "titre": "Meuble TV suspendu design",
-    "desc": "Meuble TV flottant avec niches de rangement. Design épuré, idéal pour salon moderne.",
-    "prix": 145000,
+    "cat": "Pack",
+    "titre": "GAZINIERE PETIT MODELE FRANCE AUREVOIR",
+    "desc": "MICRO-ONDE, PETIT MODELE FRANCE AUREVOIR\nETAT : 10/10",
+    "prix": 40000,
     "tags": [
-      "Flottant",
-      "Design",
-      "Rangement"
+      "4 FEUX",
+      "PETIT MODELE",
+      "PERFORMANT"
     ],
-    "emoji": "📺",
-    "statut": "available"
+    "emoji": "",
+    "statut": "available",
+    "photos": [
+      "/images/annonces/1776436850050_yncct.jpg",
+      "/images/annonces/1776436860132_yf7fx.jpg",
+      "/images/annonces/1776436871839_tmpqn.jpg",
+      "/images/annonces/1776436886197_r6sxt.jpg",
+      "/images/annonces/1776436918051_lbckd.jpg",
+      "/images/annonces/1776436954983_2i5sv.jpg"
+    ]
   },
   {
     "id": 8,
