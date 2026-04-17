@@ -132,33 +132,46 @@
   },
   {
     "id": 8,
-    "cat": "Décoration",
-    "titre": "Set décoratif salon complet",
-    "desc": "Ensemble de décoration : coussins décoratifs, vases, bougies, cadres. Pour donner vie à votre intérieur.",
-    "prix": 85000,
+    "cat": "Pack",
+    "titre": "GAZINIERE 4 FEUX FRANCE AUREVOIR",
+    "desc": "GAZINIERE 4 FEUX\nFRANCE AUREVOIR\nETAT : 10/10",
+    "prix": 50000,
     "tags": [
-      "Ensemble complet",
-      "Coussins",
-      "Vases",
-      "Cadres"
+      "GAZINIERE",
+      "PROPRE",
+      "4 FEUX"
     ],
-    "emoji": "🎨",
-    "statut": "available"
+    "emoji": "",
+    "statut": "available",
+    "photos": [
+      "/images/annonces/1776437928600_5ygld.jpg",
+      "/images/annonces/1776437944942_ah0rf.jpg",
+      "/images/annonces/1776437956698_3tcsk.jpg",
+      "/images/annonces/1776437973522_nqx3f.jpg",
+      "/images/annonces/1776437984758_itwxr.jpg",
+      "/images/annonces/1776437998632_vggrc.jpg"
+    ]
   },
   {
     "id": 9,
     "cat": "Pack",
-    "titre": "Pack Chambre Complète",
-    "desc": "Tout pour votre chambre : lit 160x200 + matelas + armoire + table de nuit x2 + commode. Livraison incluse.",
-    "prix": 680000,
+    "titre": "GAZINIERE 4 FEUX FRANCE AUREVOIR",
+    "desc": "GAZINIERE 4 FEUX PROPRE\nFRANCE AUREVOIR",
+    "prix": 65000,
     "tags": [
-      "Complet",
-      "Matelas inclus",
-      "2 tables de nuit",
-      "Livraison"
+      "GAZINIERE",
+      "4 FEUX",
+      "PROPRE"
     ],
-    "emoji": "📦",
-    "statut": "available"
+    "emoji": "",
+    "statut": "available",
+    "photos": [
+      "/images/annonces/1776438198265_6436s.jpg",
+      "/images/annonces/1776438208434_2os90.jpg",
+      "/images/annonces/1776438227782_lqrgf.jpg",
+      "/images/annonces/1776438237751_kyd7w.jpg",
+      "/images/annonces/1776438254877_37dov.jpg"
+    ]
   },
   {
     "id": 10,
