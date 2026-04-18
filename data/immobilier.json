@@ -1,25 +1,27 @@
 [
   {
     "id": 1,
-    "type": "Villa",
+    "type": "Appartement",
     "mode": "vente",
-    "quartier": "Cocody",
-    "titre": "Villa F5 avec piscine",
-    "chambres": 4,
-    "sdb": 3,
+    "quartier": "BASSAM",
+    "titre": "Appartement 4 pièces",
+    "chambres": 3,
+    "sdb": 2,
     "surface": 280,
-    "prix": 120000000,
+    "prix": 50000000,
     "unite": "",
-    "desc": "Magnifique villa avec piscine, jardin paysagé, garage 2 voitures. Quartier résidentiel calme de Cocody.",
-    "equip": [
-      "Piscine",
-      "Jardin",
-      "Garage",
-      "Gardiennage",
-      "Groupe électrogène"
-    ],
+    "desc": "Magnifique appartement 4 pièces neuf jamais habite à BASSAM",
+    "equip": [],
     "emoji": "🏡",
-    "statut": "available"
+    "statut": "available",
+    "photos": [
+      "/images/annonces/1776536317761_pfvut.jpg",
+      "/images/annonces/1776536330187_64x03.jpg",
+      "/images/annonces/1776536347132_sl5zf.jpg",
+      "/images/annonces/1776536362853_sz2eo.jpg",
+      "/images/annonces/1776536402885_irrp7.jpg",
+      "/images/annonces/1776536426829_3hyyj.jpg"
+    ]
   },
   {
     "id": 2,
