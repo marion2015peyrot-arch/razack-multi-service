@@ -235,17 +235,25 @@
   },
   {
     "id": 12,
-    "room": "pack",
-    "cat": "Pack",
-    "titre": "Pack Bureau Complet PME",
-    "desc": "Aménagement complet pour 4 postes de travail : bureaux, fauteuils, caissons, armoire archives. Installation incluse.",
-    "prix": 1200000,
+    "room": "cuisine",
+    "cat": "GAZINIERE",
+    "titre": "GAZINIERE 5 FEUX FRANCE AUREVOIR",
+    "desc": "GAZIERE 5 FEUX\nFRANCE AUREVOIR\nPROPRE",
+    "prix": 250000,
     "tags": [
-      "4 postes",
-      "Professionnel",
-      "Installation incluse"
+      "GAZINIERE",
+      "5 FEUX",
+      "PROPRE"
     ],
-    "emoji": "📦",
-    "statut": "available"
+    "emoji": "",
+    "statut": "available",
+    "photos": [
+      "/images/annonces/1776535460264_sr6wi.jpg",
+      "/images/annonces/1776535469945_2pyxp.jpg",
+      "/images/annonces/1776535487109_x95sr.jpg",
+      "/images/annonces/1776535503061_1etxh.jpg",
+      "/images/annonces/1776535518860_p0rqj.jpg",
+      "/images/annonces/1776535535079_1vs2y.jpg"
+    ]
   }
 ]
