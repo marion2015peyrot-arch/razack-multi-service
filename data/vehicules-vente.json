@@ -226,20 +226,28 @@
   },
   {
     "id": 10,
-    "brand": "Nissan",
-    "model": "Patrol Y62",
-    "year": 2018,
-    "km": 85000,
+    "brand": "VOLKSWAGEN",
+    "model": "TAOS",
+    "year": 2025,
+    "km": 95,
     "fuel": "Essence",
     "transmission": "Automatique",
-    "type": "SUV",
-    "price": 32000000,
+    "type": "Pick-up",
+    "price": 22000000,
     "status": "available",
-    "color": "Blanc",
-    "engine": "5.6L V8",
-    "doors": 5,
+    "color": "BLEUE NUIT",
+    "engine": "1.5L Turbo-158ch,",
+    "doors": 4,
     "emoji": "🚙",
-    "desc": "SUV de luxe 8 places, moteur V8, équipements premium complets."
+    "desc": "CAMERA DE RECUL - Apple CarPlay,\nIntérieur tissu, Siege et coffre",
+    "photos": [
+      "/images/annonces/1776688836666_r39zg.jpg",
+      "/images/annonces/1776688846054_8stjk.jpg",
+      "/images/annonces/1776688857083_453fi.jpg",
+      "/images/annonces/1776688869818_o2yc0.jpg",
+      "/images/annonces/1776688899307_oj0ej.jpg",
+      "/images/annonces/1776688911160_wqq4j.jpg"
+    ]
   },
   {
     "id": 11,
