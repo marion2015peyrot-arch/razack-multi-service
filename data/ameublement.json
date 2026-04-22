@@ -84,17 +84,20 @@
     "id": 5,
     "room": "salon",
     "cat": "Canapé",
-    "titre": "Salon complet 7 places + table",
-    "desc": "Ensemble salon complet : canapé 3 places + 2 fauteuils + table basse + tapis. Livraison incluse.",
-    "prix": 650000,
+    "titre": "SALON COMPLET 7 PLACES HAUT STANDING",
+    "desc": "Ensemble salon complet : Similicuir. Livraison incluse.",
+    "prix": 600000,
     "tags": [
       "Complet",
       "7 places",
-      "Tapis inclus",
-      "Livraison"
+      "Similicuir",
+      "Livraison incluse"
     ],
     "emoji": "🛋️",
-    "statut": "available"
+    "statut": "available",
+    "photos": [
+      "/images/annonces/1776886956285_yek79.jpg"
+    ]
   },
   {
     "id": 6,
@@ -255,5 +258,72 @@
       "/images/annonces/1776535518860_p0rqj.jpg",
       "/images/annonces/1776535535079_1vs2y.jpg"
     ]
+  },
+  {
+    "titre": "SALON COMPLET 7 PLACES",
+    "room": "salon",
+    "cat": "FAUTEUILS",
+    "prix": 650000,
+    "statut": "available",
+    "emoji": "🛋️",
+    "tags": [
+      "Tissu velou",
+      "mousse importé",
+      "7 places",
+      "Livraison incluse"
+    ],
+    "desc": "SALON 7 PLACES\nTISSU EN VELOU\nMOUSSE IMPORTE",
+    "photos": [
+      "/images/annonces/1776887362302_tikr0.jpg"
+    ],
+    "id": 13
+  },
+  {
+    "titre": "SALON 6 PLACES",
+    "room": "salon",
+    "cat": "FAUTEUILS",
+    "prix": 500000,
+    "statut": "available",
+    "emoji": "🛋️",
+    "tags": [
+      "TISSU EN SERVIETTE"
+    ],
+    "desc": "FAUTEUILS 6 PLACES\nTISSU SERVIETTE",
+    "photos": [
+      "/images/annonces/1776887596095_j48d2.jpg"
+    ],
+    "id": 14
+  },
+  {
+    "titre": "SALON 6 PLACES",
+    "room": "salon",
+    "cat": "FAUTEUILS",
+    "prix": 450000,
+    "statut": "available",
+    "emoji": "🛋️",
+    "tags": [
+      "TISSU SERVIETTE"
+    ],
+    "desc": "SALON 6 PLACES\nTISSU SERVIETTE, EN DESIGN",
+    "photos": [
+      "/images/annonces/1776887711905_ye1bx.jpg"
+    ],
+    "id": 15
+  },
+  {
+    "titre": "SALON COMPLET 7 PLACES + TABLE",
+    "room": "salon",
+    "cat": "FAUTEUILS",
+    "prix": 680000,
+    "statut": "available",
+    "emoji": "🛋️",
+    "tags": [
+      "TISSU EN VELOU",
+      "DESIGN",
+      "AVEC MOTIF"
+    ],
+    "desc": "SALON COMPLETS 7 PLACES AVEC LA TABLE\nEN VELOU\nDESIGN\nAVEC MOTIF",
+    "photos": [],
+    "id": 16
   }
 ]
