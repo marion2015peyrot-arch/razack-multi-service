@@ -620,5 +620,30 @@
       "/images/annonces/1777655800747_kz8id.jpg"
     ],
     "id": 25
+  },
+  {
+    "brand": "KIA",
+    "model": "SPORTAGE",
+    "year": 2026,
+    "km": 0,
+    "price": 29000000,
+    "color": "NOIRE",
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "type": "SUV",
+    "engine": "4 CYLINDRES",
+    "doors": 4,
+    "status": "available",
+    "emoji": "🚗",
+    "desc": "Bouton Start/Stop,\nCaméra 360°, Intérieur Cuir\nToit ouvrant panoramique\nSièges et Coffre électrique",
+    "photos": [
+      "/images/annonces/1777904576587_6vrld.jpg",
+      "/images/annonces/1777904585045_g3pwt.jpg",
+      "/images/annonces/1777904593903_nhnu9.jpg",
+      "/images/annonces/1777904612087_szijd.jpg",
+      "/images/annonces/1777904631768_9cf74.jpg",
+      "/images/annonces/1777904643652_8o85j.jpg"
+    ],
+    "id": 26
   }
 ]
