@@ -645,5 +645,30 @@
       "/images/annonces/1777904643652_8o85j.jpg"
     ],
     "id": 26
+  },
+  {
+    "brand": "MITSUBISHI",
+    "model": "L200 SPORTERO 2026",
+    "year": 2026,
+    "km": 0,
+    "price": 32000000,
+    "color": "NOIRE",
+    "fuel": "Diesel",
+    "transmission": "Automatique",
+    "type": "Pick-up",
+    "engine": "4 CYLINDRES",
+    "doors": 4,
+    "status": "available",
+    "emoji": "🚗",
+    "desc": "Démarrage Start,\nCaméra 360°, \nIntérieur Cuir\nSiège électrique\nCharge à induction",
+    "photos": [
+      "/images/annonces/1777905212226_lpff7.jpg",
+      "/images/annonces/1777905220718_3i8uo.jpg",
+      "/images/annonces/1777905230967_foxwr.jpg",
+      "/images/annonces/1777905245729_0vwyo.jpg",
+      "/images/annonces/1777905266913_bivga.jpg",
+      "/images/annonces/1777905276929_nd1ef.jpg"
+    ],
+    "id": 27
   }
 ]
