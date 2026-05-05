@@ -670,5 +670,30 @@
       "/images/annonces/1777905276929_nd1ef.jpg"
     ],
     "id": 27
+  },
+  {
+    "brand": "TOYOTA",
+    "model": "RAV4 LIMITED HYBRIDE",
+    "year": 2022,
+    "km": 18000,
+    "price": 25000000,
+    "color": "NOIRE",
+    "fuel": "Diesel",
+    "transmission": "Automatique",
+    "type": "SUV",
+    "engine": "4 CYLINDRES",
+    "doors": 4,
+    "status": "available",
+    "emoji": "🚗",
+    "desc": "Couleur noire, très belle, Importé Immtr en cours\nDémarrage Start/Stop, Toit ouvrant,\nIntérieur Cuir, Siège et coffre électrique",
+    "photos": [
+      "/images/annonces/1777999191514_35t2x.jpg",
+      "/images/annonces/1777999201979_ln82g.jpg",
+      "/images/annonces/1777999210509_ggv56.jpg",
+      "/images/annonces/1777999227062_hmcko.jpg",
+      "/images/annonces/1777999235865_knozd.jpg",
+      "/images/annonces/1777999253188_mrrgc.jpg"
+    ],
+    "id": 28
   }
 ]
