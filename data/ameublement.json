@@ -419,5 +419,22 @@
       "/images/annonces/1778065720426_hlrn2.jpg"
     ],
     "id": 21
+  },
+  {
+    "titre": "SALON 6 PLACES TISSU SERVIETTE",
+    "room": "salon",
+    "cat": "FAUTEUILS",
+    "prix": 500000,
+    "statut": "available",
+    "emoji": "🛋️",
+    "tags": [
+      "Tissu",
+      "serviette"
+    ],
+    "desc": "Revêtement en tissu bouclette ( effet serviette)\nConfort enveloppant \nDesign moderne et tendance\nStructure solide\nAmbiance chaleureuse garantie",
+    "photos": [
+      "/images/annonces/1778066078659_wx925.jpg"
+    ],
+    "id": 22
   }
 ]
