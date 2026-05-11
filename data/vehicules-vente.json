@@ -769,5 +769,30 @@
       "/images/annonces/1778499978247_5vaus.jpg"
     ],
     "id": 31
+  },
+  {
+    "brand": "MERCEDES-BENZ",
+    "model": "GLC 300 4MATIC",
+    "year": 2022,
+    "km": 65000,
+    "price": 28500000,
+    "color": "BLANCHE",
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "type": "SUV",
+    "engine": "4 CYLINDRES",
+    "doors": 4,
+    "status": "available",
+    "emoji": "🚗",
+    "desc": "Transmission intégrale 4MATIC\nDémarrage Start/Stop\nIntérieur cuir premium\nCaméra de recul/360°\nSièges électriques\nCoffre électriques,\nToit ouvrant panoramique",
+    "photos": [
+      "/images/annonces/1778505052600_55j6f.jpg",
+      "/images/annonces/1778505060129_fnkdn.jpg",
+      "/images/annonces/1778505076562_glh0h.jpg",
+      "/images/annonces/1778505093339_qlljf.jpg",
+      "/images/annonces/1778505104952_jav7j.jpg",
+      "/images/annonces/1778505119238_grq25.jpg"
+    ],
+    "id": 32
   }
 ]
