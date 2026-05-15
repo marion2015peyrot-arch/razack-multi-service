@@ -842,5 +842,30 @@
       "/images/annonces/1778879233536_vieoz.jpg"
     ],
     "id": 34
+  },
+  {
+    "brand": "MERCEDES",
+    "model": "GLA 2016",
+    "year": 2016,
+    "km": 190000,
+    "price": 10000000,
+    "color": "MARRON",
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "type": "SUV",
+    "engine": "",
+    "doors": 4,
+    "status": "available",
+    "emoji": "🚗",
+    "desc": "TRES PROPRE\nPRET A ROULER",
+    "photos": [
+      "/images/annonces/1778879736453_zcqyb.jpg",
+      "/images/annonces/1778879744701_7e12k.jpg",
+      "/images/annonces/1778879758118_6y4ue.jpg",
+      "/images/annonces/1778879791858_qjusc.jpg",
+      "/images/annonces/1778879800438_mzkgc.jpg",
+      "/images/annonces/1778879807974_7wbj9.jpg"
+    ],
+    "id": 35
   }
 ]
