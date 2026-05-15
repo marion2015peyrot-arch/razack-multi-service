@@ -818,5 +818,29 @@
       "/images/annonces/1778505608719_wrv92.jpg"
     ],
     "id": 33
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 2018",
+    "year": 2018,
+    "km": 0,
+    "price": 14500000,
+    "color": "NOIRE",
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "type": "SUV",
+    "engine": "4 CYLINDRES",
+    "doors": 4,
+    "status": "available",
+    "emoji": "🚗",
+    "desc": "Moteur puissant et économique\nIntérieur cuir premium\nGrand écran multimédia\nClimatisation automatique\nCaméra de recul\nCapteurs avant/arrière\nToit panoramique\nJantes aluminium\nFull options\nTrès propre intérieur / extérieur",
+    "photos": [
+      "/images/annonces/1778879192247_q57mp.jpg",
+      "/images/annonces/1778879200121_zq6h6.jpg",
+      "/images/annonces/1778879209684_9rsd7.jpg",
+      "/images/annonces/1778879226381_3q2zt.jpg",
+      "/images/annonces/1778879233536_vieoz.jpg"
+    ],
+    "id": 34
   }
 ]
